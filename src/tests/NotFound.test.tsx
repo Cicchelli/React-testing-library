@@ -5,7 +5,6 @@ import App from '../App';
 const renderAppWithTestRoute = () => {
   renderWithRouter(<App />, { route: '/teste' });
 };
-
 test('Verifica se existe um h2 com o texto "Page requested not found"', () => {
   renderAppWithTestRoute();
   expect(screen.getByRole('heading', { name: 'Page requested not found' })).toBeInTheDocument();
